@@ -42,7 +42,6 @@
             </div>
           </div>
           <div id="#search-history">
-          
           </div>
           <!--Append button history here-->
         </div>
@@ -50,8 +49,10 @@
       <div class="list-group" id="history"></div>
     </div>
     <div class="jumbotron  bg-transparent border border-3 border-dark float-right d-flex justify-content-end col-lg-9">
-      <div class="container">
-        <h1 class="display-4">Date:<span id="date"></span></h1>
+      <div class="container" id="jumbotronCity">
+        <h1 class="display-4"><span id="date"></span></h1>
+        <!--Elements disappear in Jumbotron-->
+        <!--<h5><span id="jumbotronCity"></span></h5>-->
         <p class="lead">Temp:<span id="temp"></span></p>
         <p class="lead">Wind:<span id="wind"></span></p>
         <p class="lead">Humidity:<span id="humidity"></span></p>
@@ -63,46 +64,57 @@
       <div class="card m-3 border border-3 border-dark" style="width: 18rem;">
         <!--Card 1-->
         <div class="card-body">
-          <h5 class="card-title">City:</h5>
-          <p class="card-text">Temp:<span class="temp"></span></p>
-          <p class="card-text">Wind:<span class="wind"></span></p>
-          <p class="card-text">Humidity:<span class="humidity"></span></p>
+          <h5 class="card-title">City:<span class="card-city"></span></h5>
+          <!--To dynamically append weather icon to bootstrap cards-->
+          <img src="" alt="weather-icon" class="weather-icon">
+          <p class="card-text">Time:<span id="card1-time"></span></p>
+          <p class="card-text">Temp:<span id="card1-temp"></span></p>
+          <p class="card-text">Wind:<span id="card1-wind"></span></p>
+          <p class="card-text">Humidity:<span id="card1-humidity"></span></p>
         </div>
       </div>
       <!--Card 2-->
       <div class="card m-3 border border-3 border-dark" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">City:</h5>
-          <p class="card-text">Temp:<span class="temp"></span></p>
-          <p class="card-text">Wind:<span class="wind"></span></p>
-          <p class="card-text">Humidity:<span class="humidity"></span></p>
+          <h5 class="card-title">City:<span class="card-city"></span></h5>
+          <img src="" alt="weather-icon" class="weather-icon">
+          <p class="card-text">Time:<span id="card2-time"></span></p>
+          <p class="card-text">Temp:<span id="card2-temp"></span></p>
+          <p class="card-text">Wind:<span id="card2-wind"></span></p>
+          <p class="card-text">Humidity:<span id="card2-humidity"></span></p>
         </div>
       </div>
       <!--Card 3-->
       <div class="card m-3 border border-3 border-dark" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">City:</h5>
-          <p class="card-text">Temp:<span class="temp"></span></p>
-          <p class="card-text">Wind:<span class="wind"></span></p>
-          <p class="card-text">Humidity:<span class="humidity"></span></p>
+          <h5 class="card-title">City:<span class="card-city"></span></h5>
+          <img src="" alt="weather-icon" class="weather-icon">
+          <p class="card-text">Time:<span id="card3-time"></span></p>
+          <p class="card-text">Temp:<span id="card3-temp"></span></p>
+          <p class="card-text">Wind:<span id="card3-wind"></span></p>
+          <p class="card-text">Humidity:<span id="card3-humidity"></span></p>
         </div>
       </div>
       <!--Card 4-->
       <div class="card m-3 border border-3 border-dark" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">City:</h5>
-          <p class="card-text">Temp:<span class="temp"></span></p>
-          <p class="card-text">Wind:<span class="wind"></span></p>
-          <p class="card-text">Humidity:<span class="humidity"></span></p>
+          <h5 class="card-title">City:<span class="card-city"></span></h5>
+          <img src="" alt="weather-icon" class="weather-icon">
+          <p class="card-text">Time:<span id="card4-time"></span></p>
+          <p class="card-text">Temp:<span id="card4-temp"></span></p>
+          <p class="card-text">Wind:<span id="card4-wind"></span></p>
+          <p class="card-text">Humidity:<span id="card4-humidity"></span></p>
         </div>
       </div>
       <!--Card 5-->
       <div class="card m-3 border border-3 border-dark" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">City:</h5>
-          <p class="card-text">Temp:<span class="temp"></span></p>
-          <p class="card-text">Wind:<span class="wind"></span></p>
-          <p class="card-text">Humidity:<span class="humidity"></span></p>
+          <h5 class="card-title">City:<span class="card-city"></span></h5>
+          <img src="" alt="weather-icon" class="weather-icon">
+          <p class="card-text">Time:<span id="card5-time"></span></p>
+          <p class="card-text">Temp:<span id="card5-temp"></span></p>
+          <p class="card-text">Wind:<span id="card5-wind"></span></p>
+          <p class="card-text">Humidity:<span id="card5-humidity"></span></p>
         </div>
       </div>
     </div>
