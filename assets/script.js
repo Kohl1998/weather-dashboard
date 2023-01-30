@@ -6,6 +6,8 @@ var searchHistory = $('#search-history');
 var searchButton = $('#search-button');
 
 // Create var with moment js to update time 
+var dateToday = moment().format('MMMM Do YYYY, h:mm:ss a');
+var jumbotronDate = $('#date').text(moment().format('MMMM Do YYYY'));
 
 // Event listener for search button 
 $(searchButton).on('click', function (e) {
