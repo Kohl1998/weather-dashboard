@@ -34,18 +34,18 @@ $(searchButton).on('click', function (e) {
             // To format date
             var date = day + "/" + month + "/" + year;
             // To append weather icons to bootstrap cards
-            var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png"
+            var iconURL = "http://openweathermap.org/img/wn/" + iconCode + ".png"
             // To get icon code of first element
-            var iconCode = response.list[0].weather[0].id
+            var iconCode = response.list[0].weather[0].icon
             var weatherIcon = $('.weather-icon').attr('src', iconURL)
             console.log(response.list[0].weather[0].id)
             
             // To render the search city to card title
             var jumbotronCity = $('.card-city').text(" " + response.city.name)
             // To access the first index [0]
-            var jumbotronTemp = $('#temp').text(" " + response.list[0].main.temp)
-            var jumbotronWind = $('#wind').text(" " + response.list[0].wind.speed)
-            var jumbotronHumidity = $('#humidity').text(" " + response.list[0].main.humidity)
+            var jumbotronTemp = $('#temp').text(" " + (response.list[0].main.temp - 273.15).toFixed(2) + "°C")
+            var jumbotronWind = $('#wind').text(" " + response.list[0].wind.speed + "mph")
+            var jumbotronHumidity = $('#humidity').text(" " + response.list[0].main.humidity + "%")
             var searchHistory = $('#search-history')
             
             // Displays cities searched to buttons + adds bootstrap class color of blue
@@ -54,33 +54,34 @@ $(searchButton).on('click', function (e) {
             
             // Card content 1
             var cardTime = $('#card1-time').text(" " + response.list[0].dt_txt)
-            var cardTemp = $('#card1-temp').text(" " + response.list[0].main.temp)
-            var cardWind = $('#card1-wind').text(" " + response.list[0].wind.speed)
-            var cardHumidity = $('#card1-humidity').text(" " + response.list[0].main.humidity)
+            // substracting 273.15 from temperature within object returns kelvin
+            var cardTemp = $('#card1-temp').text(" " + (response.list[0].main.temp - 273.15).toFixed(2) + "°C")
+            var cardWind = $('#card1-wind').text(" " + response.list[0].wind.speed + "mph")
+            var cardHumidity = $('#card1-humidity').text(" " + response.list[0].main.humidity + "%")
 
             // card content 2
             var cardTime = $('#card2-time').text(" " + response.list[10].dt_txt)
-            var cardTemp = $('#card2-temp').text(" " + response.list[10].main.temp)
-            var cardWind = $('#card2-wind').text(" " + response.list[10].wind.speed)
-            var cardHumidity = $('#card2-humidity').text(" " + response.list[10].main.humidity)
+            var cardTemp = $('#card2-temp').text(" " + (response.list[10].main.temp - 273.15).toFixed(2) + "°C")
+            var cardWind = $('#card2-wind').text(" " + response.list[10].wind.speed + "mph")
+            var cardHumidity = $('#card2-humidity').text(" " + response.list[10].main.humidity + "%")
 
             // card content 3
             var cardTime = $('#card3-time').text(" " + response.list[20].dt_txt)
-            var cardTemp = $('#card3-temp').text(" " + response.list[20].main.temp)
-            var cardWind = $('#card3-wind').text(" " + response.list[20].wind.speed)
-            var cardHumidity = $('#card3-humidity').text(" " + response.list[20].main.humidity)
+            var cardTemp = $('#card3-temp').text(" " + (response.list[20].main.temp - 273.15).toFixed(2) + "°C")
+            var cardWind = $('#card3-wind').text(" " + response.list[20].wind.speed + "mph")
+            var cardHumidity = $('#card3-humidity').text(" " + response.list[20].main.humidity + "%")
 
             // card content 4
             var cardTime = $('#card4-time').text(" " + response.list[30].dt_txt)
-            var cardTemp = $('#card4-temp').text(" " + response.list[30].main.temp)
-            var cardWind = $('#card4-wind').text(" " + response.list[30].wind.speed)
-            var cardHumidity = $('#card4-humidity').text(" " + response.list[30].main.humidity)
+            var cardTemp = $('#card4-temp').text(" " + (response.list[30].main.temp - 273.15).toFixed(2) + "°C")
+            var cardWind = $('#card4-wind').text(" " + response.list[30].wind.speed + "mph")
+            var cardHumidity = $('#card4-humidity').text(" " + response.list[30].main.humidity + "%")
 
             // card content 5
             var cardTime = $('#card5-time').text(" " + response.list[39].dt_txt)
-            var cardTemp = $('#card5-temp').text(" " + response.list[39].main.temp)
-            var cardWind = $('#card5-wind').text(" " + response.list[39].wind.speed)
-            var cardHumidity = $('#card5-humidity').text(" " + response.list[39].main.humidity)
+            var cardTemp = $('#card5-temp').text(" " + (response.list[39].main.temp - 273.15).toFixed(2) + "°C")
+            var cardWind = $('#card5-wind').text(" " + response.list[39].wind.speed + "mph")
+            var cardHumidity = $('#card5-humidity').text(" " + response.list[39].main.humidity + "%")
             
         }
         // Declare variable within scope
