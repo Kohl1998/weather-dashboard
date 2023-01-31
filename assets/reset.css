@@ -5,3 +5,17 @@
 p {
     font-family: 'Montserrat', sans-serif;
 }
+
+.hr {
+    background: #000;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+#mini-jumbotron {
+    /* off-white hex color*/
+    background-color: #fff;
+}
+
