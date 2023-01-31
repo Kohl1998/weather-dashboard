@@ -83,6 +83,8 @@ $(searchButton).on('click', function (e) {
             var cardWind = $('#card5-wind').text(" " + response.list[39].wind.speed + "mph")
             var cardHumidity = $('#card5-humidity').text(" " + response.list[39].main.humidity + "%")
             
+            // Local storage to store user's information
+            localStorage.setItem("searchHistory", cityName)
         }
         // Declare variable within scope
     });
