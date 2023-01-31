@@ -49,8 +49,8 @@ $(searchButton).on('click', function (e) {
             var searchHistory = $('#search-history')
             
             // Displays cities searched to buttons + adds bootstrap class color of blue
-            var buttonHistory = $('<button>').text(response.city.name).addClass('btn-primary')
-            $('#search-history').append(buttonHistory);
+            var buttonHistory = $('<button>').text(cityName).addClass('btn-primary')
+            $('ul').append(buttonHistory);
             
             // Card content 1
             var cardTime = $('#card1-time').text(" " + response.list[0].dt_txt)
@@ -85,6 +85,7 @@ $(searchButton).on('click', function (e) {
             
             // Local storage to store user's information
             localStorage.setItem("searchHistory", cityName)
+            console.log(localStorage.getItem("searchHistory"))
         }
         // Declare variable within scope
     });
