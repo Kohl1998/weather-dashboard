@@ -25,6 +25,9 @@ $(searchButton).on('click', function (e) {
     }).then(function (response) {
         console.log(response)
         // List of objects within JSON response
+        // Displays cities searched to buttons + adds bootstrap class color of blue
+        var buttonHistory = $('<button>').text(cityName).addClass('btn-primary')
+        $('ul').append(buttonHistory);
         for (var i = 0; i < response.list.length; i++) {
             var dateplusTime = response.list[i].dt_txt;
             // Extracts next 5 days from object using index
@@ -47,10 +50,6 @@ $(searchButton).on('click', function (e) {
             var jumbotronWind = $('#wind').text(" " + response.list[0].wind.speed + "mph")
             var jumbotronHumidity = $('#humidity').text(" " + response.list[0].main.humidity + "%")
             var searchHistory = $('#search-history')
-            
-            // Displays cities searched to buttons + adds bootstrap class color of blue
-            var buttonHistory = $('<button>').text(cityName).addClass('btn-primary')
-            $('ul').append(buttonHistory);
             
             // Card content 1
             var cardTime = $('#card1-time').text(" " + response.list[0].dt_txt)
