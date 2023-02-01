@@ -14,16 +14,23 @@ $(searchButton).on('click', function (e) {
     var APIKey = 'e0100e72c6cd3ae4f47ceb4b504c906d';
     // Reads user form input
     var cityName = $('#search-input').val();
+    // Local storage to store user's information
+    localStorage.setItem("searchHistory", JSON.stringify([cityName]));
+    var retrievedCities = JSON.parse(localStorage.getItem(["searchHistory"]))
+    console.log(retrievedCities)
+    
+    // Array to hold user's search history 
+    var searchHistory = [] 
+    searchHistory.push(cityName)
+    console.log(searchHistory)
     // days requested
     var numberofDays = 40;
     var queryURL = 'https://api.openweathermap.org/data/2.5/forecast/?q=' + cityName + '&appid=' + APIKey + '&cnt=' + numberofDays;
     e.preventDefault();
-    console.log(cityName);
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response)
         // List of objects within JSON response
         // Displays cities searched to buttons + adds bootstrap class color of blue
         var buttonHistory = $('<button>').text(cityName).addClass('btn-primary')
@@ -81,11 +88,6 @@ $(searchButton).on('click', function (e) {
             var cardTemp = $('#card5-temp').text(" " + (response.list[39].main.temp - 273.15).toFixed(2) + "°C")
             var cardWind = $('#card5-wind').text(" " + response.list[39].wind.speed + "mph")
             var cardHumidity = $('#card5-humidity').text(" " + response.list[39].main.humidity + "%")
-            
-            // Local storage to store user's information
-            localStorage.setItem("searchHistory", cityName)
-            console.log(localStorage.getItem("searchHistory"))
         }
-        // Declare variable within scope
     });
 }) 
