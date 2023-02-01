@@ -20,7 +20,7 @@ To utilise the application the user has to type in a city, to see the current we
 
 ## Screenshot 
 
-![Alt text] (https://raw.github.com/Kohl1998/weather-dashboard/blob/main/assets/screenshots/weather-dashboard1.png)
+[![weather-dashboard1.png](https://i.postimg.cc/mkB4jBwf/weather-dashboard1.png)](https://postimg.cc/phG3XN4q)
 
 ## Authors and acknowledgment
 
@@ -34,6 +34,7 @@ I used 'Stack overflow' for support with rendering icons - https://stackoverflow
 I used 'MomentJS' for fetching times - https://momentjs.com/docs/
 I used 'Bootstrap 5' for the UI - https://getbootstrap.com/docs/4.0/components/card/
 I used 'Font Awesome' for icons - https://fontawesome.com/search?m=free&o=r
+I used 'Post image' for support - https://postimages.org/
 
 ## Features
 
