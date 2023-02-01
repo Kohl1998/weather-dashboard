@@ -20,7 +20,7 @@ To utilise the application the user has to type in a city, to see the current we
 
 ## Authors and acknowledgment
 
-Collabrators listed.
+Collaborators listed.
 
 ## Credits
 
