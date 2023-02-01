@@ -18,6 +18,10 @@ Lastly, once I was done I pushed all the updates to my remote repository from my
 
 To utilise the application the user has to type in a city, to see the current weather conditions, over the next 5 days. 
 
+## Screenshot 
+
+![Alt text] (https://raw.github.com/Kohl1998/weather-dashboard/blob/main/assets/screenshots/weather-dashboard1.png)
+
 ## Authors and acknowledgment
 
 Collaborators listed.
