@@ -21,6 +21,7 @@ $(searchButton).on('click', function (e) {
     
     // Array to hold user's search history 
     var searchHistory = [] 
+    // To push user input into empty array
     searchHistory.push(cityName)
     console.log(searchHistory)
     // days requested
