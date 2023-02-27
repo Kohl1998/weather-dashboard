@@ -46,4 +46,4 @@ The application features icons to represent the weather.
 
 ## License
 
-MIT license 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) 
